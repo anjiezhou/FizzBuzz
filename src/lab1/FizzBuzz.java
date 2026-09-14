@@ -6,11 +6,7 @@ package lab1;
 class FizzBuzz {
 
     public static void main(String[] args) {
-        int i = 1;
-        while (i <= 100) {
-            doFizzBuzz(i);
-            i += 1;
-        }
+        main();
 
 //        for (int i = 1; i <= 100; i++) {
 //
@@ -53,6 +49,14 @@ class FizzBuzz {
             System.out.println("Buzz");
         } else {
             System.out.println(i);
+        }
+    }
+
+    public static void main() {
+        int i = 1;
+        while (i <= 100) {
+            doFizzBuzz(i);
+            i += 1;
         }
     }
 }
