@@ -2,20 +2,21 @@ package lab1;
 
 public class Multiples {
     public static void main(String[] args) {
-        System.out.println(countMultiplesOfThreeOrFive(1000));
+        int count = multiples(1000, 3, 5);
+        System.out.println(count);
     }
 
-    public static int countMultiplesOfThreeOrFive(int integer) {
+    public static int multiples(int n, int a, int b) {
         int ctr = 0;
-        for (int i = 1; i < integer; i ++) {
-            if (multiplesOfThreeOrFive(i)) {
+        for (int i = 1; i < n; i ++) {
+            if (multiplesCheck(i, a, b)) {
                 ctr++;
             }
         }
         return ctr;
     }
 
-    public static boolean multiplesOfThreeOrFive(int integer) {
-        return (integer % 3 == 0) || (integer % 5 == 0);
+    public static boolean multiplesCheck(int n, int a, int b) {
+        return (n % a == 0) || (n % b == 0);
     }
 }
